@@ -1,4 +1,6 @@
 FROM alpine
-RUN apt-get update && apt-get install -y \
-	vim\
-&& rm -rf /var/lib/apt/lists/*
+LABEL maintainer=wseegers
+RUN apk update && \
+	apk upgrade && \
+	apk add vim
+CMD vim
