@@ -22,4 +22,4 @@ EXPOSE 9987/udp
 EXPOSE 30033
 EXPOSE 10011
 
-ENTRYPOINT "$PATH/ts3server_startscript.sh start"
+ENTRYPOINT "$TS3_PATH/ts3server_startscript.sh start"
