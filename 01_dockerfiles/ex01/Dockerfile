@@ -25,3 +25,11 @@ EXPOSE 30033
 EXPOSE 10011
 
 ENTRYPOINT sh $TS3_PATH/ts3server_minimal_runscript.sh start
+
+##
+##	Build:
+##		docker build . --tag wtc/ex01
+##
+##	Docker run:
+##		docker run -ti --rm -p 9987:9987/udp -p 30033:30033 -p 10011:10011 wtc/ex01
+##
