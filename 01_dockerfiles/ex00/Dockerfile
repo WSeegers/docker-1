@@ -1,6 +1,7 @@
-FROM alpine
-LABEL maintainer=wseegers
-RUN apk update && \
-	apk upgrade && \
-	apk add vim
-CMD vim
+FROM alpine:latest
+RUN set -e; \
+ apk update; \
+ apk upgrade; \
+ apk add vim;
+
+ENTRYPOINT vim
