@@ -3,7 +3,7 @@ FROM ruby:2.4.1
 RUN set -e; \
  apt update; \
  apt upgrade -y;
-Run gem update
+RUN gem update
 RUN gem install rails
 RUN apt install node.js -y
 
