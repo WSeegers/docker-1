@@ -1,3 +1,8 @@
+# This command will start the debian container
+docker run -it --rm debian /bin/bash
+
+# Requirements to compile source code
 apt-get update; \
-apt-get install clang; \
-apt-get install git;
+apt-get install -y clang; \
+apt-get install -y git; \
+apt-get install -y vim;

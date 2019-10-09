@@ -1,15 +1,15 @@
-FROM ruby:2.4.1
+FROM ruby
 
 RUN set -e; \
- apt update; \
- apt upgrade -y;
+ apt-get update; \
+ apt-get upgrade -y;
 RUN gem update
 RUN gem install rails
-RUN apt install node.js -y
+RUN apt-get install node.js -y
 
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
 ONBUILD ADD app /opt/app
-ONBUILD RUN bundle install
+ONBUILD RUN bundle install --without production
 ONBUILD RUN rake db:migrate

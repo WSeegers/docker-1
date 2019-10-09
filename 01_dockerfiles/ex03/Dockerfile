@@ -7,8 +7,8 @@ RUN	apt-get install -y git
 RUN apt-get install -y wget
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN	apt install postgresql -y
-RUN apt install postgresql-contrib 
+RUN	apt-get install postgresql -y
+RUN apt-get install postgresql-contrib 
 
 RUN adduser --disabled-login --gecos 'Gogs' git
 

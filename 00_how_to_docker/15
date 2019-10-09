@@ -6,3 +6,7 @@ docker run -d \
 	-e PMA_PORT="3306" \
 	-d \
 	phpmyadmin/phpmyadmin
+
+# Login information obtained from msql
+# User Root
+# Passw Kerrigan

@@ -1,7 +1,10 @@
+
+# Launch Container
 docker run --name Abathur\
 	-v /home/dotmauws:/root\
 	-p 3000:3000 -dit --rm python:2-slim
 
+# Python execution code
 docker exec Abathur python -c "
 import os
 
